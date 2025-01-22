@@ -11,13 +11,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/cookie-clicker', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-// Endpoint to handle button click
 app.post('/click', async (req, res) => {
   const { userId } = req.body;
   try {
@@ -34,7 +32,6 @@ app.post('/click', async (req, res) => {
   }
 });
 
-// Endpoint to fetch user data
 app.get('/user/:id', async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
