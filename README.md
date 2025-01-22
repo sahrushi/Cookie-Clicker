@@ -8,10 +8,12 @@ npm install
 Running the App
 To start the app, navigate to the backend directory and run:
 npm start
+
 This will start the Express server on port 5000.
 
 Next, navigate to the frontend directory and run:
 npm start
+
 This will start the React development server on port 3000.
 
 Using the App
